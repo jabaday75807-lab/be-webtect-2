@@ -21,3 +21,4 @@ export interface CreateStudentPayload {
   gap: number;
   enrollment_status: string;
 }
+    
