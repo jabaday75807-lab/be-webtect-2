@@ -1,0 +1,21 @@
+<div class="header">
+  <h1>Student Management</h1>
+  <button (click)="goToCreateStudent()">Add Student</button>
+</div>
+
+<main class="container">
+  <h2>List of Students</h2>
+  
+  @for (student of students; track student.id) {
+    <article class="card">
+      <div>
+        <h3>{{ student.first_name }} {{ student.last_name }}</h3>
+        <p>{{ student.course }}</p>
+        <p>Year {{ student.year_level }}</p>
+      </div>
+      <button class="delete" (click)="deleteStudent(student.id)">Delete</button>
+    </article>
+  } @empty {
+    <p>No students found</p>
+  }
+</main>
